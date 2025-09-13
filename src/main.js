@@ -14,3 +14,7 @@
       <p>Текст</p>
   </li>
 */
+
+import { saveInLs } from './js/local-storage-api';
+const TASKS = 'tasks-list';
+saveInLs(TASKS);

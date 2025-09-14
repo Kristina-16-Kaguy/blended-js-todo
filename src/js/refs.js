@@ -1,6 +1,6 @@
 export const refs = {
   form: document.querySelector('.header-form'),
-  taskNameInput: this.form.querySelector('[name="taskName"]'),
-  taskDescrInput: this.form.querySelector('[name="taskDescription"]'),
-  addBtn: this.form.querySelector('[type="submit"]'),
+  taskNameInput: document.querySelector('[name="taskName"]'),
+  taskDescrInput: document.querySelector('[name="taskDescription"]'),
+  addBtn: document.form.querySelector('[type="submit"]'),
 };

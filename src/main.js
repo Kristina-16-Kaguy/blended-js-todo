@@ -1,3 +1,5 @@
+import { initTasks } from './js/tasks';
+
 /*
   Створи список справ.
   На сторінці є два інпути які має вводиться назва і текст задачі.
@@ -15,6 +17,4 @@
   </li>
 */
 
-import { saveInLs } from './js/local-storage-api';
-const TASKS = 'tasks-list';
-saveInLs(TASKS);
+initTasks();

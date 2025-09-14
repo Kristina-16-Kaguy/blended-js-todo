@@ -1,4 +1,5 @@
-import { initTasks } from './js/tasks';
+import { refs } from './js/refs';
+import { addTask, deleteTask, initTasks } from './js/tasks';
 
 /*
   Створи список справ.
@@ -18,3 +19,22 @@ import { initTasks } from './js/tasks';
 */
 
 initTasks();
+
+refs.form.addEventListener('submit', event => {
+  event.preventDefault();
+  const title = refs.taskNameInput.value.trim();
+  const description = refs.taskDescrInput.value.trim();
+
+  if (!title || !description) {
+    alert('Input cannot be empty!');
+    return;
+  } else {
+    addTask(title, description);
+    refs.form.reset();
+  }
+});
+
+refs.delBtn.addEventListener('click', event => {
+  const title = event.target.closest('.task-list-item').querySelector('h3');
+  deleteTask(title);
+});

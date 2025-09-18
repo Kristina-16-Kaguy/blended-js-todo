@@ -34,7 +34,12 @@ refs.form.addEventListener('submit', event => {
   }
 });
 
-refs.delBtn.addEventListener('click', event => {
-  const title = event.target.closest('.task-list-item').querySelector('h3');
+refs.tasksContainer.addEventListener('click', event => {
+  if (!event.target.classList.contains('task-list-item-btn')) {
+    return;
+  }
+  const title = event.target
+    .closest('.task-list-item')
+    .querySelector('h3').textContent;
   deleteTask(title);
 });

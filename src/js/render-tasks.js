@@ -6,7 +6,7 @@ export function renderTasks(TASKS) {
     taskobj =>
       `<li class="task-list-item">
         <button class="task-list-item-btn">Delete</button>
-        <h3>t${taskobj.title}</h3>
+        <h3>${taskobj.title}</h3>
         <p>${taskobj.description}</p>
       </li>`
   ).join('');

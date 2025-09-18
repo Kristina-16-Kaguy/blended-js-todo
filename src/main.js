@@ -1,5 +1,6 @@
 import { refs } from './js/refs';
 import { addTask, deleteTask, initTasks } from './js/tasks';
+import { changeTheme } from './js/theme-switcher';
 
 /*
   Створи список справ.
@@ -43,3 +44,5 @@ refs.tasksContainer.addEventListener('click', event => {
     .querySelector('h3').textContent;
   deleteTask(title);
 });
+
+refs.themeBtn.addEventListener('click', changeTheme);
